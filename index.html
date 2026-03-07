@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Issues Tracker</title>
+  <link rel="shortcut icon" href="./assets/fev.webp" type="image/x-icon">
+  <!-- tailwind css -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- font Geist -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap"   rel="stylesheet">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body >
+  <!-- ==================== signin div start ======================== -->
+  <div class="sign_in_area w-full max-w-[1600px] py-[60px] min-h-screen bg-[#F8FAFC] mx-auto flex items-center justify-center">
+    <!-- chaild div start -->
+    <div class="login_from w-[520px] p-[32px] gap-[24px] bg-[#FFF] border border-[#FFF] shadow-sm shadow-[#00000014] mx-auto rounded-lg ">
+      <div class="logo-ara text-center">
+        <img src="assets/github-logo.png" class="mx-auto" alt="">
+        <h2 class="text-[#1F2937] font-semibold text-[24px] pt-[24px] ">GitHub Issues Tracker</h2>
+        <p class="text-[#64748B] font-normal text-[16px] pt-[4px] ">Sign in to manage your issues</p>
+      </div>
+          <!--================= form start here ================-->
+    <div class="form-area pt-6">
+      <div
+        class="card w-full"
+      >
+        <div class="card-body">
+          <fieldset class="fieldset space-y-2">
+            <label class="label text-[#1F2937] font-normal text-[16px]">Username</label>
+            <input
+              id="input-name"
+              type=" text"
+              class="input rounded-[8px] w-full bg-[#FFF] border-[#E4E4E7]"
+              placeholder="Enter Username"
+              value="admin"
+            />
+            <label class="label text-[#1F2937] font-normal text-[16px]">Password</label>
+            <input
+              id="input-pin"
+              type="password"
+              class="input rounded-[8px] w-full bg-[#FFF] border-[#E4E4E7]"
+              placeholder="Enter Password"
+              value="admin123"
+              maxlength="8"
+            />
+            <button
+              id="login-btn"
+              class="btn btn-neutral mt-3 bg-[#4A00FF] border-none rounded-[8px] cursor-pointer"
+            >
+              Sign In
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <!--================= form End here ================-->
+    <div class="flex items-center my-1 p-[24px]">
+      <div class="flex-grow border-t border-gray-300"></div>
+        <span class="mx-4 text-[#1F2937] font-semibold">OR</span>
+      <div class="flex-grow border-t border-gray-300"></div>
+  </div>
+  <!-- Demo Credentials -->
+   <div class="Demo Credentials text-center">
+    <h2 class="pb-4 text-[#64748B]">Demo Credentials:</h2>
+    <div class="bg-[#F8FAFC] rounded-lg p-[24px] text-center ">
+        <p class="text-[#1F2937] text-[16px]"><span class="font-bold">Username:</span> admin</p>
+        <p class="text-[#1F2937] text-[16px]"><span class="font-bold">Password:</span> admin123</p>
+    </div>
+   </div>
+    </div>
+    <!-- chaild div end -->
+  </div>
+  <!-- ============================ signin div end============================ -->
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+*{
+     font-family: "Geist", sans-serif;
+}
+
+.boxmodel{
+     border-radius: 8px;
+     border: 1px solid #FFF;
+     background: #FFF;
+     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.08);
+}
+.btntab{
+     text-align: center;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: 100%; 
+     border-radius: 4px;
+     border: 1px solid #E4E4E7;
+     padding: 8px 18px;
+}
+.titel-text{
+     color:  #1F2937;
+     font-family: Geist;
+     font-size: 20px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+}
+.pere-text{
+     color:  #64748B;
+     font-family: Geist;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+}
