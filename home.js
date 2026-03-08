@@ -20,7 +20,7 @@ const displayIssues = (issues) => {
 
   issues.forEach(issue => {
     const card = document.createElement("div");
-    card.className = "bg-white rounded-lg shadow p-4 cursor-pointer hover:shadow-lg transition mb-3";
+    card.className = " fade-in bg-white rounded-lg shadow p-4 cursor-pointer transition transform hover:-translate-y-1 hover:shadow-xl duration-300 mb-3";
 
     // Border status color
     if(issue.status === "open"){
@@ -86,8 +86,6 @@ const loadIssues = async () => {
 const openModal = (issue) => {
   const modal = document.getElementById("modal");
   modal.classList.remove("hidden");
-
-
   const fields = {
     "h2": issue.title,
     ".modal-desc": issue.description,
