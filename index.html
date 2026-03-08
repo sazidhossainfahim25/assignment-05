@@ -18,30 +18,35 @@
 </head>
 <body >
   <!-- ==================== signin div start ======================== -->
-  <div class="sign_in_area w-full max-w-[1600px] py-[60px] min-h-screen bg-[#F8FAFC] mx-auto flex items-center justify-center">
-    <!-- chaild div start -->
-    <div class="login_from w-[520px] p-[32px] gap-[24px] bg-[#FFF] border border-[#FFF] shadow-sm shadow-[#00000014] mx-auto rounded-lg ">
-      <div class="logo-ara text-center">
-        <img src="assets/github-logo.png" class="mx-auto" alt="">
-        <h2 class="text-[#1F2937] font-semibold text-[24px] pt-[24px] ">GitHub Issues Tracker</h2>
-        <p class="text-[#64748B] font-normal text-[16px] pt-[4px] ">Sign in to manage your issues</p>
-      </div>
-          <!--================= form start here ================-->
+    <div class="sign_in_area w-full max-w-[1600px] min-h-screen bg-[#F8FAFC] mx-auto flex items-center justify-center">
+
+  <!-- chaild div start -->
+  <div class="login_from w-full max-w-[520px] p-[32px] bg-[#FFF] border border-[#E5E7EB] shadow-lg shadow-[#0000005b] mx-auto rounded-lg">
+
+    <div class="logo-ara text-center">
+      <img src="assets/github-logo.png" class="mx-auto" alt="">
+      <h2 class="text-[#1F2937] font-semibold text-[24px] pt-[24px]">GitHub Issues Tracker</h2>
+      <p class="text-[#64748B] font-normal text-[16px] pt-[4px]">Sign in to manage your issues</p>
+    </div>
+
+    <!-- form start -->
     <div class="form-area pt-6">
-      <div
-        class="card w-full"
-      >
-        <div class="card-body">
-          <fieldset class="fieldset space-y-2">
-            <label class="label text-[#1F2937] font-normal text-[16px]">Username</label>
+
+      <div class="w-full">
+        <div class="p-0">
+
+          <fieldset class="space-y-3">
+
+            <label class="text-[#1F2937] text-[16px]">Username</label>
             <input
               id="input-name"
-              type=" text"
+              type="text"
               class="input rounded-[8px] w-full bg-[#FFF] border-[#E4E4E7]"
               placeholder="Enter Username"
               value="admin"
             />
-            <label class="label text-[#1F2937] font-normal text-[16px]">Password</label>
+
+            <label class="text-[#1F2937] text-[16px]">Password</label>
             <input
               id="input-pin"
               type="password"
@@ -50,33 +55,44 @@
               value="admin123"
               maxlength="8"
             />
+
             <button
               id="login-btn"
-              class="btn btn-neutral mt-3 bg-[#4A00FF] border-none rounded-[8px] cursor-pointer"
+              class="btn w-full mt-3 bg-[#4A00FF] text-white border-none rounded-[8px]"
             >
               Sign In
             </button>
+
           </fieldset>
+
         </div>
       </div>
+
     </div>
-    <!--================= form End here ================-->
-    <div class="flex items-center my-1 p-[24px]">
+    <!-- form end -->
+
+    <!-- OR section -->
+    <div class="flex items-center my-6">
       <div class="flex-grow border-t border-gray-300"></div>
-        <span class="mx-4 text-[#1F2937] font-semibold">OR</span>
+      <span class="mx-4 text-[#1F2937] font-semibold">OR</span>
       <div class="flex-grow border-t border-gray-300"></div>
-  </div>
-  <!-- Demo Credentials -->
-   <div class="Demo Credentials text-center">
-    <h2 class="pb-4 text-[#64748B]">Demo Credentials:</h2>
-    <div class="bg-[#F8FAFC] rounded-lg p-[24px] text-center ">
+    </div>
+
+    <!-- Demo Credentials -->
+    <div class="text-center">
+      <h2 class="pb-4 text-[#64748B]">Demo Credentials:</h2>
+
+      <div class="bg-[#F8FAFC] rounded-lg p-[24px]">
         <p class="text-[#1F2937] text-[16px]"><span class="font-bold">Username:</span> admin</p>
         <p class="text-[#1F2937] text-[16px]"><span class="font-bold">Password:</span> admin123</p>
+      </div>
+
     </div>
-   </div>
-    </div>
-    <!-- chaild div end -->
+
   </div>
+  <!-- chaild div end -->
+
+</div>
   <!-- ============================ signin div end============================ -->
    <script src="signin.js"></script>
 </body>
