@@ -121,8 +121,8 @@ document.querySelector('#modal .close-btn').addEventListener('click', () => {
 });
 
 // Search
-document.getElementById("searchInput").addEventListener("input", (e) => {
-  const query = e.target.value.toLowerCase();
+document.getElementById("searchButton").addEventListener("click", () => {
+  const query = document.getElementById("searchInput").value.toLowerCase();
   const filtered = allIssues.filter(issue =>
     issue.title.toLowerCase().includes(query) ||
     issue.description.toLowerCase().includes(query)
