@@ -5,4 +5,4 @@
     map is transforms each element and returns a new array with the modified values.
     filter is  returns a new array with only elements that satisfy a condition.
 4 :Arrow function is short syntax for functions, returns expression automatically, and inherits this from surrounding scope.   
- 5 :`string ${variable}` allows embedding variables/expressions and multi-line strings easily 
+ 5 :`string ${variable}` allows embedding variables/expressions and multi-line strings easily .
