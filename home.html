@@ -41,7 +41,7 @@
           <path d="m21 21-4.3-4.3"></path>
         </g>
       </svg>
-      <input type="search" required placeholder="Search issues..." />
+      <input type="search" id="searchInput" required placeholder="Search issues..." />
     </label>
     <!-- button -->
       <button class="btn btn-primary"><i class="fa-solid fa-plus"></i>New Issue</button>
@@ -53,21 +53,22 @@
     <!-- IssuesBtn start -->
     <section class="IssuesBtn boxmodel ">
       <div class="btn-tabs p-6 flex items-center justify-start gap-1">
-        <button class="btntab bg-[#4A00FF] text-white">all</button>
-        <button class="btntab text-[#64748B]">open</button>
-        <button class="btntab text-[#64748B]">close</button>
+        <button onclick="setActiveTab('allTab')" id="allTab" class="btntab text-[#64748B]   hover:bg-blue-700 hover:text-white transition">all</button>
+        <button onclick="setActiveTab('openTab')" id="openTab" class="btntab text-[#64748B] hover:bg-blue-700 hover:text-white transition">open</button>
+        <button onclick="setActiveTab('closeTab')" id="closeTab" class="btntab text-[#64748B] hover:bg-blue-700 hover:text-white transition">close</button>
       </div>
     </section>
     <!-- IssuesBtn end -->
      <!-- IssuesStatus start -->
-    <section class="IssuesStatus boxmodel ">
+    <section id="IssuesStatus" class=" boxmodel ">
         <div class="flex justify-between items-center p-6">
           <div class="left-side">
             <div class=" flex  items-center gap-3">
               <img src="assets/Aperture.png" alt="">
               <div class="titel">
-                <h2 class="titel-text">50 Issues</h2>
-                <p class="pere-text">Track and manage your project issues</p>
+                <h2 class="titel-text"><span id="issueLength">0</span> Issues</h2>
+                <p class="pere-text text-[16px]">Track and manage your project issues</p>
+                
               </div>
             </div>
           </div>
@@ -82,7 +83,7 @@
             <div>
             </div>
               <div class="flex  items-center gap-1 justify-center">
-                <img src="assets/Closed- Status .png " class="w-4 h-4" alt="">
+                <img src="assets/Closed .png" class="w-4 h-4" alt="">
                 <h2 class="titel-text">close</h2>
               </div>
             </div>
@@ -90,10 +91,38 @@
         </div>
     </section>
     <!-- IssuesStatus end -->
-    <!--allissuesCard start  -->
-    <div class="allissuesCard"></div>
-    <!-- allissuesCard end -->
+    <!--issuesContainer start  -->
+    <div id="issuesContainer" class=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+
+    </div>
+    <!-- issuesContainer end -->
+
+      <!-- Modal Background -->
+<div id="modal" class="hidden fixed inset-0 flex items-center justify-center bg-black/40">
+  <div class="bg-white w-[500px] rounded-lg shadow-lg p-6">
+    <h2 class="text-2xl font-bold mb-2"></h2>
+    <div class="flex items-center gap-2 mb-3">
+      <span class="status-span text-xs px-2 py-1 rounded-full"></span>
+      <p class="text-sm text-gray-500 createdAt"></p>
+    </div>
+    <div class="flex gap-2 mb-4 tags-container"></div>
+    <p class="text-gray-600 text-sm mb-6 modal-desc"></p>
+    <div class="bg-gray-100 rounded-lg p-4 flex justify-between items-center mb-6">
+      <div>
+        <p class="text-sm text-gray-500">Assignee:</p>
+        <p class="font-semibold assignee"></p>
+      </div>
+      <div class="text-center">
+        <p class="text-sm text-gray-500 mb-1">Priority:</p>
+        <span class="bg-red-500 text-white text-xs px-3 py-1 rounded-full modal-priority"></span>
+      </div>
+    </div>
+    <div class="flex justify-end">
+      <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 close-btn">Close</button>
+    </div>
+  </div>
+</div>
   </main>
-   <script src="script.js"></script>
+   <script src="home.js"></script>
 </body>
 </html>
