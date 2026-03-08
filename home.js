@@ -87,7 +87,7 @@ const openModal = (issue) => {
   const modal = document.getElementById("modal");
   modal.classList.remove("hidden");
 
-  // Map fields dynamically
+
   const fields = {
     "h2": issue.title,
     ".modal-desc": issue.description,
